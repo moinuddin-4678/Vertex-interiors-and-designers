@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+$blue:#C7DBF7;
+$GREY:#BFC7DE;
+$purple:#75708C;
+$Pink:#C59594;
+$black:#010101;
+$darkblue:#565C81;
+$orenge:#b7703eaf;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .25s ease-in;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.disFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    @extend .wrapper;
+    flex-direction: row;
+    display: flex;
+    border-bottom: solid 2px #010101;
+    text-align: center;
+        @extend .disFlex;
+        h1 {
+            margin-bottom: 10px;
+        }
+   
+           a {
+            margin-right: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            &:hover {
+                background-color: $darkblue;
+                color: white;
+            }
+           }
+    }
+
+
+section {
+    @extend .wrapper;
+    @extend .disFlex;
+    border-bottom: solid 2px $black;
+
+    .leaftBanner {
+        width: 60%;
+        margin: 50px 0 50px 0;
+        img {
+            border-radius: 100px 0 100px 0px;
+            box-shadow: 10px 20px 10px $black;
+        }
+    }
+
+    .rightBanner {
+        width: 40%;
+        height: 250px;
+        #rightnav {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            @extend .disFlex;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: space-between;
+            a {
+                justify-content: center;
+                border-radius: 20px;
+                @extend .disFlex;
+                width: 130px;
+                height: 50px;
+                background-color: $orenge;
+
+                // &:hover {
+                //     background-color: ;
+                // }
+            }
+        }
+    }
+
+}
+
+.proverb {
+    @extend .wrapper;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        width: 800px;
+        margin: 30px;
+    }
+}
